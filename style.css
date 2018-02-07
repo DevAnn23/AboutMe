@@ -73,9 +73,9 @@ html {
 }
 
 .navbar-nav {
+	text-transform: uppercase;
 	text-align: right;
 	margin-right: 5%;
-	font-size: 2rem;
 }
 
 .navbar-brand {
@@ -162,8 +162,8 @@ html {
 .form-button {
 	margin: 5px 0 10px 0;
 	padding: 4px 7px;
-	background: #cc0000;
-	border: 2px solid #cc0000;
+	background: #ad8631;
+	border: 2px solid #1e2021;
 	width: 100px;
 	border-radius: 10px;
 	text-transform: uppercase;
@@ -197,8 +197,8 @@ html {
 }
 
 .navbar a {
-	color: #aaaaaa;
-	font-size: 1rem;
+	color: #000000;
+	font-size: 1.6rem;
 }
 
 .photo-header {
@@ -230,7 +230,7 @@ html {
 	position: relative;
 	float: left;
 	background-color: #ad8631;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 }
 
 .draw > span {
@@ -251,7 +251,7 @@ html {
 	border: 2px solid #000000;
 	border-radius: 50%;
 	position: absolute;
-	bottom: 5%;
+	bottom: 13%;
 	font-size: 2rem;
 	text-align: center;
 	right: 50%;
@@ -394,22 +394,55 @@ html {
 .card {
 	overflow: hidden;
 	margin: auto;
+	margin-bottom: 2%;
 	text-align: center;
 	width: 300px;
 }
 
-.footer span {
+.icons-contact {
 	font-size: 1.2em;
+	text-align: center;
 	display: block;
 	width: 2em;
 	height: 2em;
 	border-radius: 100%;
 	text-align: center;
 	line-height: 2em;
-	border: 2px solid black;
-	background-color: black;
+	border: 2px solid #1b1e21;
+	background-color: #ad8631;
 	color: white;
 	margin: 1rem 0;
+	position: relative;
+
+}
+
+.icons-contact:hover span {
+	font-size: 1.7em;
+	transition: all 0.7s;
+}
+
+.icons-contact.mail:before {
+	position: absolute;
+	top: 0;
+	right: -88px;
+	content: "Napisz";
+	width: 53px;
+}
+
+.icons-contact.linkedin:before {
+	position: absolute;
+	top: 0;
+	right: -88px;
+	content: "Linkedin";
+	width: 53px;
+}
+
+.icons-contact.phone:before {
+	position: absolute;
+	top: 0;
+	right: -88px;
+	content: "Zadzwoń";
+
 }
 
 .quote {
