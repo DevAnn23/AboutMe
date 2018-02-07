@@ -413,11 +413,12 @@ html {
 }
 
 .quote {
+
 	min-height: 10rem;
 	font-size: 1.9rem;
 	position: relative;
 	background-size: 20%;
-	font-family: 'Marck Script', sans-serif;
+	font-family: 'Exo', sans-serif;
 	color: aliceblue;
 	text-shadow: 0px -1px 0 #000000;
 }
