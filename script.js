@@ -1,14 +1,19 @@
 window.onload = function () {
 	"use strict"; // Start of use strict
 
+
 	var $path1 = $("#header").offset().top,
 		$path2 = $("#parallax_section").offset().top,
 		$path3 = $("#portfolio").offset().top,
 		$navH = $(".navbar").innerHeight(),
 		animationHeading = document.getElementsByClassName('animation-heading'),
-		navItem = document.getElementsByClassName('nav-item');
-	
-	//console.log("aaaaa" + navItem[i].target.offsetTop);
+		navItem = document.getElementsByClassName('nav-item'),
+		spanToggler = document.getElementById("span-toggler"),
+		buttonToggler = document.getElementById("button-toggler");
+
+	buttonToggler.addEventListener("click", function(){
+		spanToggler.classList.toggle('ion-chevron-up');
+		})
 
 	function addNumber() {
 		var labelAdd = document.querySelector('#labelAdd'),

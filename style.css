@@ -362,7 +362,6 @@ html {
 }
 
 .important {
-	margin: 0 8px;
 	letter-spacing: 0.2rem;
 	text-transform: uppercase;
 	white-space: nowrap;
