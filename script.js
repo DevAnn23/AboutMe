@@ -1,7 +1,6 @@
 window.onload = function () {
 	"use strict"; // Start of use strict
 
-
 	var $path1 = $("#header").offset().top,
 		$path2 = $("#parallax_section").offset().top,
 		$path3 = $("#portfolio").offset().top,
@@ -11,9 +10,9 @@ window.onload = function () {
 		spanToggler = document.getElementById("span-toggler"),
 		buttonToggler = document.getElementById("button-toggler");
 
-	buttonToggler.addEventListener("click", function(){
+	buttonToggler.addEventListener("click", function () {
 		spanToggler.classList.toggle('ion-chevron-up');
-		})
+	})
 
 	function addNumber() {
 		var labelAdd = document.querySelector('#labelAdd'),
@@ -60,7 +59,6 @@ window.onload = function () {
 		scrollNavItem();
 	}
 
-
 	$("#link1").on("click", function () {
 		$(this).addClass("selected");
 		$(this).siblings().removeClass("selected");
@@ -88,8 +86,6 @@ window.onload = function () {
 	function scrollHeader() {
 		var $arrow = $("#arrow"),
 			$off = $("main").offset().top;
-		console.log($off);
-		console.log($navH);
 		$("#arrow").on("click", function () {
 			$("html").animate({
 				scrollTop: $off - $navH
