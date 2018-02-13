@@ -1,10 +1,12 @@
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
 body > * {
+	-webkit-transition: all .9s linear;
 	transition: all .9s linear;
 	width: 100%;
 	font-family: "Mouse Memoirs";
@@ -44,21 +46,15 @@ html {
 
 .section-header {
 	text-align: center;
-	background: -moz-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* ff3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
 	/* safari4+,chrome */
-	background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* safari5.1+,chrome10+ */
-	background: -o-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* opera 11.10+ */
-	background: -ms-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* ie10+ */
 	background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	height: 100vh;
 	position: relative;
 	-webkit-box-shadow: 10px 10px 30px -7px rgba(64, 59, 64, 1);
-	-moz-box-shadow: 10px 10px 30px -7px rgba(64, 59, 64, 1);
 	box-shadow: 10px 10px 30px -7px rgba(64, 59, 64, 1);
 	height: 100vh;
 	position: fixed;
@@ -132,6 +128,7 @@ html {
 	right: 0;
 	width: 0%;
 	height: 100%;
+	-webkit-transform: rotateY(20%);
 	transform: rotateY(20%);
 	background-color: #ad8631;
 	animation: drawHeading 3s ease-out;
@@ -149,6 +146,7 @@ html {
 	text-align: center;
 	right: 50%;
 	padding: auto;
+	-webkit-transform: translateX(50%);
 	transform: translateX(50%);
 	overflow-y: hidden;
 	text-shadow: 0px -15px 0 #ffffff, 0px -30px 0 #ffffff;
@@ -194,7 +192,6 @@ html {
 	word-spacing: 5px;
 	overflow-y: hidden;
 	font-size: 2.2rem;
-	border-top: 6px solid #ad8631;
 }
 
 
@@ -204,8 +201,10 @@ html {
 }
 
 .about-figure .img-fluid {
+	-webkit-transition: all 0.97s ease-in-out;
 	transition: all 0.97s ease-in-out;
-	filter: saturate(150%);
+	-webkit-filter: saturate(170%);
+	filter: saturate(170%);
 }
 
 .about-figure {
@@ -216,6 +215,7 @@ html {
 	margin: 1rem;
 	border: 2px solid #ad863196;
 }
+
 .about .img-fluid:hover {
 	-webkit-transform: scale(1.4) rotate(-15deg);
 	transform: scale(1.4) rotate(-15deg);
@@ -258,6 +258,7 @@ html {
 .alert {
 	margin-bottom: 0;
 	font-size: 1.5rem;
+	-ms-flex-item-align: center;
 	align-self: center;
 	background-color: #c5bba9e3;
 	border: 1px solid transparent;
@@ -314,11 +315,13 @@ html {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
 .icon-contact:hover span {
 	font-size: 1.3em;
+	-webkit-transition: all 0.7s;
 	transition: all 0.7s;
 }
 
@@ -404,15 +407,10 @@ html {
 	min-height: 19.3rem;
 	padding-bottom: 2rem;
 	z-index: 1;
-	background: -moz-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* ff3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
 	/* safari4+,chrome */
-	background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* safari5.1+,chrome10+ */
-	background: -o-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* opera 11.10+ */
-	background: -ms-linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 	/* ie10+ */
 	background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, #818182 100%);
 }
@@ -432,8 +430,8 @@ html {
 	content: open-quote;
 	position: absolute;
 	font-size: 9rem;
-	bottom: 63%;
-	left: 4%;
+	bottom: 30%;
+	left: 3%;
 	animation: quote-mark 3s infinite ease;
 	-webkit-animation: quote-mark 3s infinite ease;
 }
@@ -493,6 +491,7 @@ html {
 	color: #000000;
 	font-size: 1.5rem;
 	-ms-flex: 0 1 auto;
+	-webkit-box-flex: 0;
 	flex: 0 1 auto;
 	padding: 2px;
 	padding-top: 0;
@@ -588,17 +587,40 @@ html {
 	}
 }
 
-@keyframes quote-mark {
+@-webkit-keyframes quote-mark {
 	0% {
+		-webkit-transform: rotate(0);
 		transform: rotate(0);
 	}
 	50% {
+		-webkit-transform: rotate(-5deg);
 		transform: rotate(-5deg);
 	}
 	80% {
+		-webkit-transform: rotate(5deg);
 		transform: rotate(5deg);
 	}
 	100% {
+		-webkit-transform: rotate(1deg);
+		transform: rotate(1deg);
+	}
+}
+
+@keyframes quote-mark {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(-5deg);
+		transform: rotate(-5deg);
+	}
+	80% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	100% {
+		-webkit-transform: rotate(1deg);
 		transform: rotate(1deg);
 	}
 }
@@ -618,6 +640,7 @@ html {
 		position: absolute;
 		top: 13%;
 		left: 3%;
+		-webkit-transform: rotate(-10deg);
 		transform: rotate(-10deg);
 	}
 	.carousel-caption {
@@ -625,7 +648,6 @@ html {
 		right: 15%;
 		top: -37%;
 	}
-/*
 	.quote:before {
 		content: open-quote;
 		position: absolute;
@@ -633,9 +655,9 @@ html {
 		bottom: 3%;
 		left: 3%;
 	}
-*/
 
 	.quote:after {
+		content: close-quote;
 		position: absolute;
 		font-size: 9rem;
 		bottom: -100%;
