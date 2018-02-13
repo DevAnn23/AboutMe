@@ -1,5 +1,6 @@
 window.onload = function () {
-	"use strict"; // Start of use strict
+  // jQuery methods go here...
+		"use strict"; // Start of use strict
 
 	var $path1 = $("#header").offset().top,
 		$path2 = $("#parallax_section").offset().top,
@@ -93,4 +94,7 @@ window.onload = function () {
 		})
 	}
 	scrollHeader();
+
+
+
 }
