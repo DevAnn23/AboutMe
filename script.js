@@ -91,6 +91,8 @@ window.onload = function () {
 				scrollTop: $off - $navH
 			}, 1000)
 		})
+		console.log($off - $navH + "wywolane");
 	}
 	scrollHeader();
+	console.log($off - $navH);
 }
