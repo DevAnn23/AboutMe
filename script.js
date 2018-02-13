@@ -1,4 +1,4 @@
-window.onload = function () {
+
 	"use strict"; // Start of use strict
 
 	var $path1 = $("#header").offset().top,
@@ -93,4 +93,4 @@ window.onload = function () {
 		})
 	}
 	scrollHeader();
-}
+
